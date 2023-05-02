@@ -6,38 +6,27 @@ import pandas as pd
 
 
 def table_loader(table_path):
-    """Load a table from a path. Return the table.
-
-    Parameters
-    ----------
-    table_path : str
-        Path to the table.
-
-    Returns
-    -------
-    pandas.DataFrame
-        The loaded table.
     """
+    Load a table from a path and return it as a pandas DataFrame.
 
+    :param table_path: The path to the table file.
+    :type table_path: str
+    :return: The loaded table as a pandas DataFrame.
+    :rtype: pandas.DataFrame
+    """
     df = pd.read_csv(table_path, sep=",", comment="#", dtype=str)
     return df
 
 
 def headers_reader(table_path):
-    """Load a table from a path. Read and return the headers.
-
-    Parameters
-    ----------
-    table_path : str
-        Path to the table.
-
-    Returns
-    -------
-    pandas.DataFrame
-        The loaded table.
     """
+    Load a table from a path and returns headers as a list.
 
+    :param table_path: The path to the table file.
+    :type table_path: str
+    :return: The headers of the dataframe.
+    :rtype: list
+    """
     df = pd.read_csv(table_path, sep=",", comment="#", dtype=str)
     headers = df.columns.tolist()
-    print(headers)
     return headers

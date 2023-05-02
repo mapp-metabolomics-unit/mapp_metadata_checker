@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+
+"""Loading constants for the unit tests."""
+
 import os
 
 HERE = os.path.abspath(os.path.dirname(__file__))

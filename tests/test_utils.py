@@ -5,8 +5,7 @@
 
 import unittest
 
-import mapp_metadata_checker
-from mapp_metadata_checker.utils import *
+from mapp_metadata_checker.utils import headers_reader, table_loader
 from tests.constants import DATA_TABLE_PATH
 
 
